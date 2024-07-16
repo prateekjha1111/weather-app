@@ -38,8 +38,11 @@ async function fetchWeather(city) {
       document.querySelector('.wind h1').innerHTML = Math.round(data.current.wind_kph) + ' km/h';
       document.querySelector('.humidity h1').innerHTML = data.current.humidity + '%';
 
+      document.querySelector('.weather').style.display = 'block';
+      document.querySelector('.name').innerHTML = 'Developed with ❤️ by Prateek';
   } catch (error) {
       console.error('Error fetching the weather data:', error);
+      document.querySelector('.weather').style.display = 'none';
   }
 }
 
